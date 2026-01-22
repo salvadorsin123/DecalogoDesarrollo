@@ -1,0 +1,73 @@
+/* Custom Font Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Roboto:wght@300;400;500&display=swap');
+
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #0f172a;
+    /* Slate 950 - Coherente con Menú y Quiz */
+    color: #e2e8f0;
+}
+
+h1,
+h2,
+h3 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.stat-number {
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Chart Container Strict Styling */
+.chart-container {
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 350px;
+    max-height: 400px;
+}
+
+@media (min-width: 768px) {
+    .chart-container {
+        height: 400px;
+    }
+}
+
+/* Barra de desplazamiento personalizada (Azul) */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1e293b;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #092a70;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #092a70;
+}
+
+/* Efectos de tarjetas */
+.card-hover {
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    background-color: #1e293b;
+    /* Slate 800 */
+    border: 1px solid #334155;
+}
+
+.card-hover:hover {
+    transform: translateY(-5px);
+    border-color: #092a70;
+    /* Borde azul al pasar el mouse */
+    box-shadow: 0 10px 25px -5px rgba(37, 99, 235, 0.2);
+}
+
+
+

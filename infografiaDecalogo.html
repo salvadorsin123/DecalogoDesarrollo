@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>El Decálogo del Desarrollo - Resumen Visual</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <link rel="stylesheet" href="css/styles.css">
+
+</head>
+
+<body class="text-gray-800">
+
+    <!-- Header Section -->
+    <header class="bg-gradient-to-r from-blue-950 to-blue-900 text-white py-12 px-4 shadow-lg">
+        <div class="max-w-6xl mx-auto text-center">
+          <!-- <p class="text-amber-400 font-bold tracking-widest uppercase mb-2">Octavio Mavila Medina</p> -->
+            <h1 class="text-4xl md:text-6xl font-black mb-4">EL DECÁLOGO DEL DESARROLLO</h1>
+            <p class="text-xl md:text-2xl font-light max-w-3xl mx-auto">¿Por qué algunos países son ricos y otros
+                pobres? La respuesta no está en los recursos, sino en la <span
+                    class="font-bold text-amber-300">mentalidad</span>.</p>
+        </div>
+        <div class="fixed top-6 left-6 z-50">
+            <a href="index.html"
+                class="bg-slate-800/80 backdrop-blur text-white px-5 py-2 rounded-full border border-slate-700 hover:bg-slate-700 transition flex items-center gap-2 text-sm font-bold shadow-2xl">
+                <span>←</span> Menú
+            </a>
+        </div>
+        <div class="fixed top-1 right-6 z-50 pointer-events-none">
+            <img src="img/logo.png" alt="Logo Software"
+                class="h-16 md:h-24 lg:h-32 w-auto object-contain animate-float-mini drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+        </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="max-w-7xl mx-auto p-6 grid grid-cols-1 gap-12">
+
+        <!-- Section 1: The Paradox -->
+        <section class="bg-gray-300 rounded-2xl shadow-md p-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-blue-900 mb-4 border-l-8 border-amber-500 pl-4">La Paradoja de la
+                        Riqueza</h2>
+                    <p class="mb-4 text-lg leading-relaxed text-gray-600">
+                        Según el análisis de Mavila, existe una contradicción fundamental. Países con territorios
+                        pequeños y sin recursos naturales (como Suiza o Japón) son potencias mundiales. Mientras tanto,
+                        naciones con vastos recursos naturales permanecen en el subdesarrollo.
+                    </p>
+                    <p class="mb-4 text-lg leading-relaxed text-gray-600">
+                        <strong>La conclusión:</strong> La riqueza de una nación no depende de la naturaleza, sino de la
+                        <span class="text-blue-600 font-bold">actitud de su gente</span>.
+                    </p>
+                    <div class="bg-blue-50 p-4 rounded-lg border border-blue-100">
+                        <ul class="list-none space-y-2">
+                            <li class="flex items-center"><span class="text-2xl mr-2 text-green-500">●</span>
+                                <strong>Suiza:</strong> Sin océano, cultiva cacao ni playas tropicales, pero tiene los
+                                mejores chocolates y flotas navieras.</li>
+                            <li class="flex items-center"><span class="text-2xl mr-2 text-red-500">●</span>
+                                <strong>Países Pobres:</strong> Ricos en minerales y tierra fértil, pero dependientes y
+                                endeudados.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="flex flex-col items-center">
+                    <div class="chart-container">
+                        <canvas id="resourceVsWealthChart"></canvas>
+                    </div>
+                    <p class="text-sm text-gray-500 mt-2 text-center italic">Comparación conceptual basada en el
+                        análisis del texto.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 2: The 10 Principles (The Decálogo) -->
+        <section>
+            <div class="text-center mb-10">
+                <h2 class="text-4xl font-bold text-blue-900 mb-2">Los 10 Pilares del Progreso</h2>
+                <div class="w-24 h-1 bg-amber-500 mx-auto"></div>
+                <p class="mt-4 text-gray-600 max-w-2xl mx-auto">Estas son las cualidades que, según Mavila, se repiten
+                    consistentemente en las naciones desarrolladas. No son leyes físicas, son hábitos culturales.</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Items generated explicitly via HTML -->
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-blue-500 card-hover text-center">
+                    <div class="text-6xl font-black text-blue-100 mb-2">1</div>
+                    <h3 class="text-xl font-bold text-gray-800">Orden</h3>
+                    <p class="text-sm text-gray-500 mt-2">Organización en la vida y el espacio.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-blue-500 card-hover text-center">
+                    <div class="text-6xl font-black text-blue-100 mb-2">2</div>
+                    <h3 class="text-xl font-bold text-gray-800">Limpieza</h3>
+                    <p class="text-sm text-gray-500 mt-2">Higiene física y moral.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-blue-500 card-hover text-center">
+                    <div class="text-6xl font-black text-blue-100 mb-2">3</div>
+                    <h3 class="text-xl font-bold text-gray-800">Puntualidad</h3>
+                    <p class="text-sm text-gray-500 mt-2">Respeto por el tiempo propio y ajeno.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-blue-500 card-hover text-center">
+                    <div class="text-6xl font-black text-blue-100 mb-2">4</div>
+                    <h3 class="text-xl font-bold text-gray-800">Responsabilidad</h3>
+                    <p class="text-sm text-gray-500 mt-2">Asumir las consecuencias de los actos.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-blue-500 card-hover text-center">
+                    <div class="text-6xl font-black text-blue-100 mb-2">5</div>
+                    <h3 class="text-xl font-bold text-gray-800">Deseo de Superación</h3>
+                    <p class="text-sm text-gray-500 mt-2">La ambición sana de mejorar siempre.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-amber-500 card-hover text-center">
+                    <div class="text-6xl font-black text-amber-100 mb-2">6</div>
+                    <h3 class="text-xl font-bold text-gray-800">Honradez</h3>
+                    <p class="text-sm text-gray-500 mt-2">Integridad absoluta en las acciones.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-amber-500 card-hover text-center">
+                    <div class="text-6xl font-black text-amber-100 mb-2">7</div>
+                    <h3 class="text-xl font-bold text-gray-800">Respeto a la Ley</h3>
+                    <p class="text-sm text-gray-500 mt-2">Cumplimiento de reglamentos y normas.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-amber-500 card-hover text-center">
+                    <div class="text-6xl font-black text-amber-100 mb-2">8</div>
+                    <h3 class="text-xl font-bold text-gray-800">Respeto a los Demás</h3>
+                    <p class="text-sm text-gray-500 mt-2">Reconocer el derecho del prójimo.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-amber-500 card-hover text-center">
+                    <div class="text-6xl font-black text-amber-100 mb-2">9</div>
+                    <h3 class="text-xl font-bold text-gray-800">Amor al Trabajo</h3>
+                    <p class="text-sm text-gray-500 mt-2">Ver el trabajo como creación, no castigo.</p>
+                </div>
+                <div class="bg-gray-300 p-6 rounded-xl shadow-lg border-t-4 border-amber-500 card-hover text-center">
+                    <div class="text-6xl font-black text-amber-100 mb-2">10</div>
+                    <h3 class="text-xl font-bold text-gray-800">Ahorro e Inversión</h3>
+                    <p class="text-sm text-gray-500 mt-2">Previsión para el futuro.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 3: Deep Dive Analysis -->
+        <section class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+
+            <!-- Radar Chart: Cultural Gap -->
+            <div class="bg-gray-300 rounded-2xl shadow-md p-6">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">La Brecha Cultural</h3>
+                <p class="mb-4 text-gray-600">Este gráfico visualiza la diferencia radical entre la mentalidad
+                    "subdesarrollada" y la mentalidad propuesta en el Decálogo. El progreso requiere expandir todas
+                    estas dimensiones simultáneamente.</p>
+                <div class="chart-container">
+                    <canvas id="mindsetRadarChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Doughnut Chart & Conclusion -->
+            <div class="bg-gray-300 rounded-2xl shadow-md p-6 flex flex-col justify-center">
+                <h3 class="text-2xl font-bold text-blue-900 mb-4">Ingredientes del Éxito Nacional</h3>
+                <p class="mb-6 text-gray-600">El autor argumenta que la educación intelectual es importante, pero la
+                    educación en <strong>valores y hábitos</strong> es el factor determinante. La riqueza material es
+                    simplemente una consecuencia de la riqueza espiritual y conductual.</p>
+
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="ingredientsChart"></canvas>
+                </div>
+
+                <div class="mt-6 p-4 bg-amber-50 rounded-lg border-l-4 border-amber-500">
+                    <p class="text-sm text-amber-900 font-semibold">"Las mismas razones que hacen progresar a una
+                        persona hacen progresar a un pueblo."</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: The Strategy (Diagram) -->
+        <section class="bg-gradient-to-br from-gray-900 to-blue-900 rounded-2xl shadow-2xl p-8 text-white text-center">
+            <h2 class="text-3xl font-bold mb-8">El Camino hacia el Futuro</h2>
+
+            <div class="flex flex-col md:flex-row justify-center items-center space-y-4 md:space-y-0 md:space-x-4">
+
+                <!-- Step 1 -->
+                <div
+                    class="bg-gray-300 text-blue-900 p-6 rounded-lg w-full md:w-1/4 h-48 flex flex-col justify-center items-center transform transition hover:scale-105">
+                    <span class="text-5xl font-bold mb-2">1</span>
+                    <h4 class="text-xl font-bold">Instruir</h4>
+                    <p class="text-sm mt-2">Difusión masiva del Decálogo en escuelas y empresas.</p>
+                </div>
+
+                <!-- Arrow -->
+                <div class="text-4xl text-amber-400 font-bold hidden md:block">→</div>
+                <div class="text-4xl text-amber-400 font-bold md:hidden">↓</div>
+
+                <!-- Step 2 -->
+                <div
+                    class="bg-gray-300 text-blue-900 p-6 rounded-lg w-full md:w-1/4 h-48 flex flex-col justify-center items-center transform transition hover:scale-105">
+                    <span class="text-5xl font-bold mb-2">2</span>
+                    <h4 class="text-xl font-bold">Practicar</h4>
+                    <p class="text-sm mt-2">Convertir los valores en hábitos diarios (20-60 días).</p>
+                </div>
+
+                <!-- Arrow -->
+                <div class="text-4xl text-amber-400 font-bold hidden md:block">→</div>
+                <div class="text-4xl text-amber-400 font-bold md:hidden">↓</div>
+
+                <!-- Step 3 -->
+                <div
+                    class="bg-amber-500 text-white p-6 rounded-lg w-full md:w-1/4 h-48 flex flex-col justify-center items-center transform transition hover:scale-105 shadow-lg border border-white">
+                    <span class="text-5xl font-bold mb-2">3</span>
+                    <h4 class="text-xl font-bold">Prosperar</h4>
+                    <p class="text-sm mt-2">Generación de riqueza, orden y justicia social.</p>
+                </div>
+            </div>
+        </section>
+        <!-- 
+        <footer class="text-center text-gray-500 text-sm mt-12 mb-6">
+            <p>Basado en el documento "Decálogo del Desarrollo" de Octavio Mavila Medina.</p>
+            <p class="mt-2">Infografía Generada con Tecnología Canvas & Chart.js</p>
+        </footer>
+-->
+    </main>
+    <script src="js/charts.js"></script>
+
+</body>
+
+</html>

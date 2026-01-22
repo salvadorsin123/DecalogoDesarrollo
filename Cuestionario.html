@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuestionario: El Decálogo del Desarrollo</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="css/quiz-styles.css">
+</head>
+
+<body class="text-gray-200 min-h-screen flex items-center justify-center p-4">
+    <div class="fixed top-6 left-6 z-50">
+        <a href="index.html"
+            class="bg-slate-800/80 backdrop-blur text-white px-5 py-2 rounded-full border border-slate-700 hover:bg-slate-700 transition flex items-center gap-2 text-sm font-bold shadow-2xl">
+            <span>←</span> Menú
+        </a>
+    </div>
+    <div class="fixed top-1 right-6 z-50 pointer-events-none">
+        <img src="img/logo.png" alt="Logo Software"
+            class="h-16 md:h-24 lg:h-32 w-auto object-contain animate-float-mini drop-shadow-[0_0_15px_rgba(59,130,246,0.5)]">
+    </div>
+    <div id="quiz-container" class="max-w-3xl w-full bg-slate-900 rounded-3xl p-8 shadow-2xl border border-slate-800">
+
+        <div class="flex items-center justify-between mb-8">
+            <div class="flex-1 bg-slate-800 h-2 rounded-full mr-6 overflow-hidden">
+                <div id="progress-bar" class="bg-blue-500 h-full transition-all duration-500" style="width: 0%"></div>
+            </div>
+            <div class="text-sm font-bold flex items-center gap-4">
+                <span class="bg-slate-800 px-3 py-1 rounded-lg"><span id="current-question-num">1</span>/10</span>
+                <span class="text-red-500">✘ <span id="wrong-count">0</span></span>
+                <span class="text-green-500">✔ <span id="right-count">0</span></span>
+            </div>
+        </div>
+
+        <div id="question-view">
+            <h2 id="question-text" class="text-2xl md:text-3xl font-bold mb-8 leading-tight">Cargando pregunta...</h2>
+
+            <div id="options-container" class="grid grid-cols-1 gap-4 mb-8">
+            </div>
+
+            <div id="feedback-area" class="hidden mb-8 transform transition-all duration-300">
+                <div id="feedback-box" class="p-5 rounded-2xl text-sm leading-relaxed border">
+                    <div id="feedback-status" class="font-black uppercase tracking-widest text-xs mb-2"></div>
+                    <div id="feedback-text"></div>
+                </div>
+            </div>
+
+            <div class="flex flex-col md:flex-row justify-between items-center border-t border-slate-800 pt-6 gap-4">
+                <button onclick="toggleHint()"
+                    class="text-slate-400 hover:text-amber-400 text-sm flex items-center transition">
+                    <span class="text-lg">💡</span> <span class="ml-2 font-medium">Mostrar pista</span>
+                </button>
+                <button id="next-btn" onclick="nextQuestion()" disabled
+                    class="w-full md:w-auto bg-blue-600 hover:bg-blue-500 disabled:opacity-30 disabled:cursor-not-allowed text-white px-10 py-3 rounded-full font-bold transition-all shadow-lg shadow-blue-900/20">
+                    Siguiente Pregunta
+                </button>
+            </div>
+            <div id="hint-text"
+                class="hidden mt-4 p-4 bg-slate-800/50 border border-slate-700 rounded-xl text-sm text-slate-300 italic">
+            </div>
+        </div>
+
+        <div id="results-view" class="hidden text-center py-10">
+            <div class="mb-6 text-6xl">🏆</div>
+            <h2 class="text-4xl font-black mb-2 font-montserrat">¡TERMINADO!</h2>
+            <div class="bg-slate-800/50 p-8 rounded-3xl mb-8 border border-slate-700">
+                <div class="text-7xl font-black text-blue-500" id="final-score">0/10</div>
+            </div>
+            <button onclick="location.reload()"
+                class="bg-white text-slate-900 hover:bg-slate-200 px-12 py-4 rounded-full font-black transition-all uppercase tracking-wider">
+                Reintentar
+            </button>
+        </div>
+    </div>
+
+    <script src="js/quiz-logic.js"></script>
+</body>
+
+</html>
